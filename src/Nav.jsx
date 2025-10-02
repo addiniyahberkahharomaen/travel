@@ -9,7 +9,7 @@ function Nav() {
         <div className="flex">
             <img src={logo} alt="logo" className="w-16 h-16" />
         <div className="flex flex-col">
-          <a href="#" className="hover:text-slate-900 text-2xl">
+          <a href="#" className="text-2xl">
             PT ADHIN BERKAH HAROMAEN
           </a>
           <a href="#" className="text-sm italic font-semibold">
@@ -17,6 +17,8 @@ function Nav() {
           </a>
         </div>
         </div>
+        {/* kanan */}
+
       </nav>
     </div>
   );
