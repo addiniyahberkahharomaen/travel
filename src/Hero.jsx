@@ -11,12 +11,12 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000); // Ganti setiap 4 detik
+    }, 3000); // Ganti setiap 4 detik
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-[500px] overflow-hidden pt-[80px]">
       {images.map((src, index) => (
         <img
           key={index}
