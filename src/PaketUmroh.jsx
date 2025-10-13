@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../src/assets/logo.png";
-import paket1 from "../src/assets/paket1.png";
+import paket1 from "../src/assets/paket1.jpg";
 import paket2 from "../src/assets/paket2.png";
 import paket3 from "../src/assets/paket3.png";
 import paket4 from "../src/assets/paket4.png";
@@ -9,27 +9,35 @@ function PaketUmroh() {
   const paketData = [
     {
       id: 1,
-      title: "Paket Umroh VIP",
-      desc: "Dengan Fasilitas Hotel Makkah dan Madinah setara 5",
+      title: "Paket Umroh SPESIAL",
+      desc: "Dengan Fasilitas Hotel Makkah, Madinah setara 5, dan FREE KOTA THAIF",
       img: paket1,
+      price: "28.000.000",
+      notprice: "29.500.000",
     },
     {
       id: 2,
       title: "Paket Umroh Bisnis",
       desc: "Dengan Fasilitas Hotel Makkah setara 5 dan Madinah setara bintang 4.",
       img: paket2,
+      price: "24.000.000",
+      notprice: "25.500.000",
     },
     {
       id: 3,
       title: "Paket Umroh Ekonomi",
       desc: "Dengan Fasilitas Hotel Makkah dan Madinah setara 4",
       img: paket3,
+      price: "20.000.000",
+      notprice: "21.500.000",
     },
     {
       id: 4,
       title: "Paket Umroh Keluarga",
       desc: "Dengan Fasilitas Hotel Makkah setara 4 dan Madinah setara bintang 3.",
       img: paket4,
+      price: "16.000.000",
+      notprice: "17.500.000",
     },
   ];
 
@@ -65,6 +73,10 @@ function PaketUmroh() {
                   {paket.title}
                 </h3>
                 <p className="text-yellow-800 text-md">{paket.desc}</p>
+                <div className="flex">
+                  <p className="text-red-800 text-2xl font-medium pr-2">{paket.price}</p>
+                <p className="text-red-800 text-lg font-medium line-through">{paket.price}</p>
+                </div>
               </div>
               <button className="mt-4 bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">
                 Pesan Sekarang

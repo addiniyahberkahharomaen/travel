@@ -7,7 +7,6 @@ function Nav() {
 
   const navItems = [
     { name: "Beranda", link: "#" },
-    { name: "Tentang", link: "#" },
     { name: "Layanan", link: "#" },
     { name: "Produk", link: "#" },
     { name: "Galeri", link: "#" },
@@ -18,7 +17,7 @@ function Nav() {
     <header
       className="
         fixed top-0 left-0 w-full z-50
-        backdrop-blur-md bg-white/40 shadow-sm
+        backdrop-blur-md bg-white/70 shadow-sm
         border-b border-white/20
       "
     >
@@ -43,9 +42,9 @@ function Nav() {
         </div>
 
         {/* Kanan - Menu Desktop */}
-        <nav className="hidden md:flex space-x-6 font-semibold bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent">
+        <nav className="hidden md:flex space-x-6 font-semibold">
           {navItems.map((item, index) => (
-            <a key={index} href={item.link} className="hover:underline">
+            <a key={index} href={item.link} className="bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent">
               {item.name}
             </a>
           ))}
