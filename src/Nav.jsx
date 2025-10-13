@@ -67,8 +67,8 @@ function Nav() {
       {isOpen && (
         <div
           className="
-            absolute top-full left-0 w-full
-            backdrop-blur-lg bg-white/80 shadow-md
+            absolute top-full right-0 w-[200px] rounded-lg
+            backdrop-blur-lg bg-white shadow-md
             flex flex-col items-center space-y-4 py-4
             font-semibold md:hidden z-50
           "
@@ -77,7 +77,7 @@ function Nav() {
             <a
               key={index}
               href={item.link}
-              className="text-green-900 hover:text-green-700"
+              className="bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent hover:text-green-700"
               onClick={() => setIsOpen(false)}
             >
               {item.name}
