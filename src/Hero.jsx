@@ -36,6 +36,9 @@ function Hero() {
         <p className="text-lg md:text-2xl mt-4 italic drop-shadow-md">
           Berkah, Mulia, Berlimpah
         </p>
+        <button className="mt-4 bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">
+                Pesan Sekarang
+              </button>
       </div>
     </div>
   );

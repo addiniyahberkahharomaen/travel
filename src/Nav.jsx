@@ -25,7 +25,7 @@ function Nav() {
       <div className="flex justify-between items-center p-2 px-4 md:px-8">
         {/* Kiri */}
         <div className="flex items-center">
-          <img src={logo} alt="logo" className="w-14 h-14 md:w-16 md:h-16" />
+          <img src={logo} alt="logo" className="w-14 h-14 md:w-16 md:h-16 pr-1" />
           <div className="flex flex-col ml-2">
             <a
               href="#"
