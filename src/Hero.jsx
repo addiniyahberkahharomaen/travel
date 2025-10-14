@@ -8,15 +8,27 @@ function Hero() {
   const images = [slide1, slide2, slide3, slide4];
   const [current, setCurrent] = useState(0);
 
+  // Nomor WhatsApp tujuan (tanpa tanda + atau 0 di depan)
+  const phoneNumber = "6281234567890";
+  const message =
+    "Assalamualaikum wr wb, saya ingin menanyakan paket umroh yang tersedia.";
+  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); // Ganti setiap 4 detik
+    }, 3000);
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden pt-[80px]" id="Beranda">
+    <div
+      className="relative w-full h-[500px] overflow-hidden pt-[80px]"
+      id="Beranda"
+    >
+      {/* Gambar slide */}
       {images.map((src, index) => (
         <img
           key={index}
@@ -29,16 +41,23 @@ function Hero() {
       ))}
 
       {/* Overlay teks */}
-      <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white text-center">
+      <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
           Selamat Datang di PT Adhin Berkah Haromaen
         </h1>
         <p className="text-lg md:text-2xl mt-4 italic drop-shadow-md">
           Berkah, Mulia, Berlimpah
         </p>
-        <button className="mt-4 bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">
-                Pesan Sekarang
-              </button>
+
+        {/* Tombol WhatsApp */}
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition"
+        >
+          Pesan Sekarang
+        </a>
       </div>
     </div>
   );
