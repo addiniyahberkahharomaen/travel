@@ -16,7 +16,7 @@ function Hero() {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden pt-[80px]">
+    <div className="relative w-full h-[500px] overflow-hidden pt-[80px]" id="Beranda">
       {images.map((src, index) => (
         <img
           key={index}
