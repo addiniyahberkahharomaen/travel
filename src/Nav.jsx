@@ -6,7 +6,7 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Beranda", link: "#" },
+    { name: "Beranda", link: "#Galeri" },
     { name: "Layanan", link: "#" },
     { name: "Produk", link: "#" },
     { name: "Galeri", link: "#" },

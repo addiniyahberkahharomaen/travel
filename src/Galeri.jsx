@@ -6,7 +6,7 @@ function Galeri() {
   const visibleImages = showAll ? images : images.slice(0, 9);
 
   return (
-    <section className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50 text-center">
+    <section className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50 text-center" id="Galeri">
       {/* Judul dan Deskripsi */}
       <div className="mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-green-900 mb-4">
