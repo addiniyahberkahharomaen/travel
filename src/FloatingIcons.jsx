@@ -33,7 +33,7 @@ function FloatingIcons() {
           <FaTiktok size={22} />
         </a>
         <a
-          href="www.youtube.com/@addiniyahberkahharomaen"
+          href="https://www.youtube.com/@addiniyahberkahharomaen"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-red-600 text-white p-3 rounded-full shadow-md hover:opacity-90 transition transform hover:scale-110"
