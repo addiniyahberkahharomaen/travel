@@ -42,7 +42,7 @@ function PaketUmroh() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50">
+    <section className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50" id="Produk">
       <div className="text-center mb-12">
   <div className="flex justify-center items-center mb-4 space-x-3">
     <img src={logo} alt="logo" className="w-15 h-15 md:w-14 md:h-14" />
@@ -56,7 +56,7 @@ function PaketUmroh() {
 </div>
 
       {/* Grid 4 Paket */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="Produk">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {paketData.map((paket) => (
           <div
             key={paket.id}
