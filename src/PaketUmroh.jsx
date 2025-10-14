@@ -6,6 +6,10 @@ import paket3 from "../src/assets/paket3.png";
 import paket4 from "../src/assets/paket4.png";
 
 function PaketUmroh() {
+  // 🔹 Nomor WhatsApp tujuan (tanpa tanda + atau 0 di depan)
+  const phoneNumber = "6283829096731";
+
+  // 🔹 Data paket
   const paketData = [
     {
       id: 1,
@@ -42,48 +46,71 @@ function PaketUmroh() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50" id="Produk">
+    <section
+      className="py-16 px-4 md:px-16 bg-gradient-to-b from-white to-green-50"
+      id="Produk"
+    >
+      {/* Judul */}
       <div className="text-center mb-12">
-  <div className="flex justify-center items-center mb-4 space-x-3">
-    <img src={logo} alt="logo" className="w-15 h-15 md:w-14 md:h-14" />
-    <h2 className="text-4xl md:text-5xl font-bold text-green-900">
-      Jenis Paket Umroh
-    </h2>
-  </div>
-  <p className="text-yellow-800 font-medium text-lg">
-    Pilih paket terbaik sesuai kebutuhan dan kenyamanan Anda.
-  </p>
-</div>
+        <div className="flex justify-center items-center mb-4 space-x-3">
+          <img src={logo} alt="logo" className="w-15 h-15 md:w-14 md:h-14" />
+          <h2 className="text-4xl md:text-5xl font-bold text-green-900">
+            Jenis Paket Umroh
+          </h2>
+        </div>
+        <p className="text-yellow-800 font-medium text-lg">
+          Pilih paket terbaik sesuai kebutuhan dan kenyamanan Anda.
+        </p>
+      </div>
 
       {/* Grid 4 Paket */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {paketData.map((paket) => (
-          <div
-            key={paket.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src={paket.img}
-              alt={paket.title}
-              className="w-full object-cover"
-            />
-            <div className="p-4 flex flex-col justify-between h-[200px]">
-              <div>
-                <h3 className="text-xl font-bold text-green-900 mb-2">
-                  {paket.title}
-                </h3>
-                <p className="text-yellow-800 text-md">{paket.desc}</p>
-                <div className="flex">
-                  <p className="text-red-800 text-2xl font-medium pr-2">{paket.price}</p>
-                <p className="text-red-800 text-lg font-medium line-through">{paket.price}</p>
+        {paketData.map((paket) => {
+          // 🔹 Buat link WhatsApp untuk tiap paket
+          const message = `Assalamualaikum wr wb, apakah ${paket.title.toUpperCase()} masih ada?`;
+          const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            message
+          )}`;
+
+          return (
+            <div
+              key={paket.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+            >
+              <img
+                src={paket.img}
+                alt={paket.title}
+                className="w-full object-cover"
+              />
+              <div className="p-4 flex flex-col justify-between h-[220px]">
+                <div>
+                  <h3 className="text-xl font-bold text-green-900 mb-2">
+                    {paket.title}
+                  </h3>
+                  <p className="text-yellow-800 text-md mb-1">{paket.desc}</p>
+                  <div className="flex items-baseline space-x-2">
+                    <p className="text-red-800 text-2xl font-semibold">
+                      {paket.price}
+                    </p>
+                    <p className="text-gray-400 line-through text-lg">
+                      {paket.notprice}
+                    </p>
+                  </div>
                 </div>
+
+                {/* 🔹 Tombol WhatsApp */}
+                <a
+                  href={waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 text-center bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition"
+                >
+                  Pesan Sekarang
+                </a>
               </div>
-              <button className="mt-4 bg-gradient-to-r from-green-800 via-yellow-700 to-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">
-                Pesan Sekarang
-              </button>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
