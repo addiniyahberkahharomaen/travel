@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Nav from './Nav'
 import PaketUmroh from './PaketUmroh'
 import Galeri from './Galeri'
+import Kontak from './Kontak'
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <PaketUmroh />
       <Galeri />
       <FloatingIcons />
+      <Kontak />
     </>
   )
 }

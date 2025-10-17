@@ -6,7 +6,7 @@ function FloatingIcons() {
     <>
       {/* WhatsApp Icon - kanan bawah */}
       <a
-        href="https://wa.me/6283829096731" // ganti dengan nomor WA kamu
+        href="https://wa.me/6283162360600" // ganti dengan nomor WA kamu
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg z-50 transition transform hover:scale-110"
