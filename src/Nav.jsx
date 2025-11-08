@@ -30,7 +30,7 @@ function Nav() {
               href="#"
               className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent"
             >
-              PT ADHIN BERKAH HAROMAEN
+              PT ADDINIYAH BERKAH HAROMAEN
             </a>
             <a
               href="#"
