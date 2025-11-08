@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../src/assets/logo.png";
 import paket1 from "../src/assets/paket11.jpg";
 import paket2 from "../src/assets/paket2.png";
 import paket3 from "../src/assets/paket3.png";
@@ -53,7 +52,6 @@ function PaketUmroh() {
       {/* Judul */}
       <div className="text-center mb-12">
         <div className="flex justify-center items-center mb-4 space-x-3">
-          <img src={logo} alt="logo" className="w-15 h-15 md:w-14 md:h-14" />
           <h2 className="text-4xl md:text-5xl font-bold text-green-900">
             Jenis Paket Umroh
           </h2>
