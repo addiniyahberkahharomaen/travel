@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../src/assets/logo.png";
-import paket1 from "../src/assets/paket1.jpg";
+import paket1 from "../src/assets/paket11.jpg";
 import paket2 from "../src/assets/paket2.png";
 import paket3 from "../src/assets/paket3.png";
 import paket4 from "../src/assets/paket4.png";
@@ -82,7 +82,7 @@ function PaketUmroh() {
                 alt={paket.title}
                 className="w-full object-cover"
               />
-              <div className="p-4 flex flex-col justify-between h-[220px]">
+              <div className="p-4 flex flex-col justify-between h-[250px]">
                 <div>
                   <h3 className="text-xl font-bold text-green-900 mb-2">
                     {paket.title}

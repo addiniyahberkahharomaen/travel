@@ -7,10 +7,10 @@ function Nav() {
 
   const navItems = [
     { name: "Beranda", link: "#Beranda" },
-    { name: "Layanan", link: "#Layanan" },
     { name: "Produk", link: "#Produk" },
     { name: "Galeri", link: "#Galeri" },
     { name: "Kontak", link: "#Kontak" },
+    { name: "Pesantren", link: "#Pesantren" }
   ];
 
   return (
@@ -44,7 +44,7 @@ function Nav() {
         {/* Kanan - Menu Desktop */}
         <nav className="hidden md:flex space-x-6 font-semibold">
           {navItems.map((item, index) => (
-            <a key={index} href={item.link} className="bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent">
+            <a key={index} href={item.link} className="bg-gradient-to-r from-green-900 via-yellow-700 to-green-800 bg-clip-text text-transparent hover:text-green-900">
               {item.name}
             </a>
           ))}

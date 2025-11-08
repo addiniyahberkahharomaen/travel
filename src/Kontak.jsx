@@ -69,6 +69,7 @@ function Kontak() {
             </p>
           </div>
 
+          {/* Tombol WhatsApp */}
           <a
             href={linkWA}
             target="_blank"
@@ -78,6 +79,24 @@ function Kontak() {
             <FaWhatsapp className="mr-2 text-xl" />
             Hubungi via WhatsApp
           </a>
+
+          {/* Lokasi Google Maps */}
+          <div className="mt-8">
+            <h4 className="text-lg font-bold text-green-900 mb-2">
+              Lokasi Kami
+            </h4>
+            <div className="w-full h-64 rounded-lg overflow-hidden shadow-md border border-green-200">
+              <iframe
+                title="Lokasi PT Adhin Berkah Haromaen"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.306447855697!2d107.45943172055063!3d-6.931021943810931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68faa118af43b9%3A0x766efb00b3ea610d!2sPondok%20Pesantren%20Addiniyyatul%20Amriyah%20Bandung%20Barat!5e0!3m2!1sid!2sid!4v1762585572339!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
 
         {/* Form Kontak */}
@@ -104,9 +123,9 @@ function Kontak() {
                 className="w-full border border-yellow-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-700"
               />
               <input
-                type="email"
-                name="email"
-                placeholder="Alamat Email"
+                type="tel"
+                name="nomor_ponsel"
+                placeholder="Nomor Ponsel Aktif"
                 required
                 className="w-full border border-yellow-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-700"
               />
@@ -127,9 +146,7 @@ function Kontak() {
             </form>
           ) : (
             <div className="text-center text-green-900 font-semibold bg-green-50 border border-green-300 rounded-lg p-6">
-              <p className="text-lg">
-                ✅ Terimakasih sudah mendaftar!
-              </p>
+              <p className="text-lg">✅ Terimakasih sudah mendaftar!</p>
               <p className="text-sm mt-2 text-yellow-800">
                 Jika tim kami tidak menghubungi dalam 24 jam,
                 silahkan hubungi langsung melalui{" "}
